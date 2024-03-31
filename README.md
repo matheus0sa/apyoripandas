@@ -1,19 +1,19 @@
 # Apyori for Pandas
 
-Este pacote busca facilitar o uso da biblioteca apyori no pandas
+This package is designed to simplify the integration of the Apyori library with Pandas.
 
-veja um exemplo:
+## Example Usage:
 
 ```python
 
 from apyoripandas.apriori import Apriori
 import pandas as pd
 
-# Exemplo de teste
-df_teste = pd.read_csv('teste.csv')
+# Example Test
+df_test = pd.read_csv('test.csv')
 
-resultado = Apriori(df_test, min_support=0.1, min_confidence=0.9, min_length=18)
+rules = Apriori(df_test, min_support=0.1, min_confidence=0.9, min_length=18)
 
 ```
 
-Neste caso resultado é um dataframe do pandas
+In this example, the `rules` variable contains a Pandas DataFrame.
