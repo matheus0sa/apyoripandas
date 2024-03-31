@@ -1,7 +1,7 @@
 from apyori import apriori as ap
 import pandas as pd
 
-def apriori(dataframe, min_support=0.1, min_confidence=0.9, min_lift=1, min_length=18):
+def Apriori(dataframe, min_support=0.1, min_confidence=0.9, min_lift=1, min_length=18):
     df = dataframe.copy()
     df = df.astype(str)
     for i in df.columns:
@@ -12,6 +12,8 @@ def apriori(dataframe, min_support=0.1, min_confidence=0.9, min_lift=1, min_leng
                       min_confidence=min_confidence, 
                       min_lift=min_lift, 
                       min_length=min_length))
+    
+    if not(results): return None
     
     df2 = pd.DataFrame(results)
 
